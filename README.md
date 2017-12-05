@@ -11,7 +11,7 @@ https://rubygems.org/gems/qy_wechat_api
 **有问题请及时提issue**
 
 ```ruby
-gem "qy_wechat_api", git: "https://github.com/lanrion/qy_wechat_api.git"
+gem "qy_wechat_api", git: "https://github.com/cooperfu/qy_wechat_api.git"
 ```
 
 # 配置

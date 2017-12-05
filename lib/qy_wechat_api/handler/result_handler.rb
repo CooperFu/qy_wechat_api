@@ -8,8 +8,8 @@ module QyWechatApi
     def initialize(code, en_msg, result={})
       @code   = code   || OK_CODE
       @en_msg = en_msg || OK_MSG
-      @cn_msg = GLOBAL_CODES[@code.to_i]
       @result = package_result(result)
+      Rails.logger.info "code: #{@code}, en_msg: #{@en_msg},result: #{@result}"
     end
 
     # This method is to valid the current request if is true or is false
@@ -21,7 +21,7 @@ module QyWechatApi
     # e.g.:
     # 45009: api freq out of limit(接口调用超过限制)
     def full_message
-      "#{code}: #{en_msg}(#{cn_msg})."
+      "#{code}: #{en_msg}."
     end
     alias_method :full_messages, :full_message
 
