@@ -3,7 +3,7 @@ module QyWechatApi
 
   class ResultHandler
 
-    attr_accessor :code, :cn_msg, :en_msg, :result
+    attr_accessor :code, :en_msg, :result
 
     def initialize(code, en_msg, result={})
       @code   = code   || OK_CODE
