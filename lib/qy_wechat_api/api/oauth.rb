@@ -17,9 +17,9 @@ module QyWechatApi
       end
 
       # 根据code获取成员信息
-      # https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=ACCESS_TOKEN&code=CODE&agentid=AGENTID
-      def get_user_info(code, agent_id)
-        http_get("user/getuserinfo", {code: code, agentid: agent_id})
+      # https://qyapi.weixin.qq.com/cgi-bin/user/getuserinfo?access_token=ACCESS_TOKEN&code=CODE
+      def get_user_info(code)
+        http_get("user/getuserinfo", code: code)
       end
 
     end
